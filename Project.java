@@ -10,6 +10,14 @@ public class Project {
          System.out.println("Usage java Project CreateItem <itemCode><itemDescription><price>");
          System.out.println("Usage java Project CreatePurchase <itemCode><purchaseQuantity>");
          System.out.println("Usage java Project CreateShipment <itemCode><shipmentQuantity><shipmentDate>");
+         System.out.println("Usage java Project GetItems <itemCode>");
+         System.out.println("Usage java Project GetShipments <itemCode>");
+         System.out.println("Usage java Project GetPurchases <itemCode>");
+         System.out.println("Usage java Project ItemsAvailable <itemCode>");
+         System.out.println("Usage java Project UpdateItem <itemCode><price>");
+         System.out.println("Usage java Project DeleteItem <itemCode>");
+         System.out.println("Usage java Project DeleteShipment <itemCode>");
+         System.out.println("Usage java Project DeletePurchase <itemCode>");
          }
          else{
             Connection con = null;
