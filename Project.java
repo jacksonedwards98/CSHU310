@@ -34,7 +34,11 @@ public class Project {
                * 
                * */
                Class.forName("com.mysql.cj.jdbc.Driver");
-               System.out.println("jdbc:mysql://localhost:"+nRemotePort+"/sockeye?verifyServerCertificate=false&useSSL=true");
+//               System.out.println("jdbc:mysql://localhost:"+nRemotePort+"/sockeye?verifyServerCertificate=false&useSSL=true");
+//adjust this to point to your DB
+//replace 'sockeye' with your DB
+//
+               System.out.println("jdbc:mysql://localhost:"+nRemotePort+"/FinalProject?verifyServerCertificate=false&useSSL=true");
                con = DriverManager.getConnection("jdbc:mysql://localhost:"+nRemotePort+"/sockeye?verifyServerCertificate=false&useSSL=true&serverTimezone=UTC", "msandbox", strDbPassword);
                // Do something with the Connection
                System.out.println("Database [sockeye db] connection succeeded!");
