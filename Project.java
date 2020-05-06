@@ -6,24 +6,22 @@ public class Project {
 
    public static void main(String[] args) throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
       if (args.length<3){
-//       System.out.println("Usage DBConnectTest <yourportnumber> <sandbox password> <dbname>");
-         System.out.println("Usage java Project CreateItem <itemCode><itemDescription><price>");
-         System.out.println("Usage java Project CreatePurchase <itemCode><purchaseQuantity>");
-         System.out.println("Usage java Project CreateShipment <itemCode><shipmentQuantity><shipmentDate>");
-         System.out.println("Usage java Project GetItems <itemCode>");
-         System.out.println("Usage java Project GetShipments <itemCode>");
-         System.out.println("Usage java Project GetPurchases <itemCode>");
-         System.out.println("Usage java Project ItemsAvailable <itemCode>");
-         System.out.println("Usage java Project UpdateItem <itemCode><price>");
-         System.out.println("Usage java Project DeleteItem <itemCode>");
-         System.out.println("Usage java Project DeleteShipment <itemCode>");
-         System.out.println("Usage java Project DeletePurchase <itemCode>");
-         }
+         printUsage();
+      }
          else{
             Connection con = null;
             Statement stmt = null, stmt2 = null;
             try
             {
+
+//**********WRITE CODE HERE TO LOOK AT ARGS AND CALL THE APPROPRIATE METHOD*****************
+//**
+//**
+//**
+//**
+//***************************************************************************************** */
+
+
                int nRemotePort = Integer.parseInt(args[0]); // remote port number of your database
                String strDbPassword = args[1];                    // database login password
                String dbName = args[2];  
@@ -99,4 +97,63 @@ public class Project {
                 }
                 }
        }		
+   private static void printUsage(){
+      System.out.println("Usage java Project CreateItem <itemCode><itemDescription><price>");
+      System.out.println("Usage java Project CreatePurchase <itemCode><purchaseQuantity>");
+      System.out.println("Usage java Project CreateShipment <itemCode><shipmentQuantity><shipmentDate>");
+      System.out.println("Usage java Project GetItems <itemCode>");
+      System.out.println("Usage java Project GetShipments <itemCode>");
+      System.out.println("Usage java Project GetPurchases <itemCode>");
+      System.out.println("Usage java Project ItemsAvailable <itemCode>");
+      System.out.println("Usage java Project UpdateItem <itemCode><price>");
+      System.out.println("Usage java Project DeleteItem <itemCode>");
+      System.out.println("Usage java Project DeleteShipment <itemCode>");
+      System.out.println("Usage java Project DeletePurchase <itemCode>");      
+   }
+
+   //**********METHODS FOR CALLING VARIOS STORED PROCEDURES********** */
+   private static void createItem(){
+      //todo code method for CreateItem<itemCode><itemDescription>
+   }
+
+   private static void createPurchase(){
+      //todo code method for CreatePurchase<itemCode><PurchaseQuantity>
+   }
+
+   private static void createShipment(){
+      //todo write method for CreateShipment<itemCode><ShipmentQuantity><shipmentDate>
+   }
+
+   private static void getItems(){
+      //todo write method for GetItems<itemCode>
+   }
+
+   private static void getShipments(){
+      //todo write method for GetShipments<itemCode>
+   }
+
+   private static void getPurchases(){
+      //todo write method for GetPurchases<itemCode>
+   }
+
+   private static void itemsAvailable(){
+      //todo write method for itemsAvailable<itemCode>
+   }
+
+   private static void updateItem(){
+      //todo write method for UpdateItem<itemCode><price>
+   }
+
+   private static  void deleteItem(){
+      //todo write method for DeleteItem<itemCode>
+   }
+
+   private static void deleteShipment(){
+      //todo write method for DeleteShipment<itemCode>
+   }
+
+   private static void deletePurchase(){
+      //todo write method for DeletePurchase<itemCode>
+   }
+
 }
