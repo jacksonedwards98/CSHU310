@@ -15,7 +15,9 @@ public class Project {
             {
 
 //**********WRITE CODE HERE TO LOOK AT ARGS AND CALL THE APPROPRIATE METHOD*****************
-//**
+               if (args[0].equals("CreateItem")){
+                  createItem();
+               }
 //**
 //**
 //**
