@@ -114,8 +114,18 @@ public class Project {
    }
 
    //**********METHODS FOR CALLING VARIOS STORED PROCEDURES********** */
-   private static void createItem(){
+   private static void createItem(String[] args){
       //todo code method for CreateItem<itemCode><itemDescription>
+      String description = args[2];
+      String code = args[1];
+      try 
+      {
+         System.out.println("Creating Item.");
+         
+         String insert = "INSERT INTO Item (itemCode, itemDescription, Price) VALUES('" + code + "', '" +
+           description + "', " + args[3] + ")";
+         
+      }
    }
 
    private static void createPurchase(){
